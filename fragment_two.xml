@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 顶部标题栏 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加书籍"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/p"/>
+
+    <!-- 表单区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 封面选择 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="书籍封面："
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_add_cover"
+                    android:layout_width="80dp"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    android:background="@android:drawable/picture_frame"
+                    android:layout_marginStart="16dp"/>
+
+                <Button
+                    android:id="@+id/btn_select_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择图片"
+                    android:backgroundTint="@color/y"
+                    android:layout_marginStart="16dp"/>
+
+            </LinearLayout>
+
+            <!-- 书名 -->
+            <EditText
+                android:id="@+id/et_add_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入书名"
+                android:inputType="text"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 作者 -->
+            <EditText
+                android:id="@+id/et_add_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入作者"
+                android:inputType="text"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 出版时间 -->
+            <EditText
+                android:id="@+id/et_add_publish_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入出版时间（如：2023-01）"
+                android:inputType="text"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Spinner
+                android:id="@+id/sp_add_cate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 简介 -->
+            <EditText
+                android:id="@+id/et_add_intro"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="请输入书籍简介"
+                android:inputType="textMultiLine"
+                android:background="@android:drawable/editbox_background"
+                android:padding="12dp"
+                android:gravity="top|start"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- 确定/取消按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_add_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="取消"
+                    android:backgroundTint="@color/y"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_add_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="确定"
+                    android:backgroundTint="@color/y"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
